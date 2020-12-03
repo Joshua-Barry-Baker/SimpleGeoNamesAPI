@@ -1,7 +1,9 @@
 <?php
     $eta=-hrtime(true);
     
-    $url='http://api.geonames.org/countryInfoJSON?formatted=true&lang='. $_REQUEST['lang'] . '&country' . $_REQUEST['country'] . '$username=JBBaker&style=full';
+    $url='http://api.geonames.org/countryInfoJSON?formatted=true&lang='. 
+    $_REQUEST['lang'] . '&country' . $_REQUEST['country'] . 
+    '$username=joshuabarrybaker&style=full';
     
     $ch = curl_init();
 
