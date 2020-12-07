@@ -1,7 +1,7 @@
 $('#btnRun').click(function(){
 
     $.ajax({
-        url: "libs/php/getGeonamesCountryInfo.php",
+        url: `libs/php/${selFetch}`,
         type: 'POST',
         dataType: 'json',
         data: {
