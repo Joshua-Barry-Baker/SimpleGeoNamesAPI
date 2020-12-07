@@ -17,9 +17,9 @@ $('#btnRun').click(function(){
                 $('#txtPopulation').html(result['data'][0]['population']);
                 $('#txtArea').html(result['data'][0]['areaInSqKm']);
             }
-        }/*,
+        },
         error: function(jqXHR, textStatus, errorThrown){
-
-        } //*/
+            console.log({jqXHR, textStatus, errorThrown})
+        }
     });
 });
