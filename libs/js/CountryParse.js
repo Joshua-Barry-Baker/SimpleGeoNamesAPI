@@ -1,4 +1,4 @@
-$('#btnRun').click(function(){
+function countryParse() {
 
     $.ajax({
         
@@ -45,4 +45,4 @@ $('#btnRun').click(function(){
             document.getElementById("apiTableDisplay").innerHTML = `Error ${jqXHR.status}: ${errorThrown}`;
         }
     });
-});
+};
