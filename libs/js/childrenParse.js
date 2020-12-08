@@ -14,7 +14,7 @@ $('#childrenBtn').click(function childrenParse() {
             
             if (result.status.name == "ok") {
 
-                document.getElementById("apiTableDisplay").innerHTML =
+                document.getElementById("countryTableDisplay").innerHTML =
                 `<div>
                     <tr>
                         <th>Continent</th>
@@ -42,7 +42,7 @@ $('#childrenBtn').click(function childrenParse() {
         },
         error: function(jqXHR, textStatus, errorThrown){
             console.log({jqXHR, textStatus, errorThrown})
-            document.getElementById("apiTableDisplay").innerHTML = `Error ${jqXHR.status}: ${errorThrown}`;
+            document.getElementById("countryTableDisplay").innerHTML = `Error ${jqXHR.status}: ${errorThrown}`;
         }
     });
 });
