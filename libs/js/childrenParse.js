@@ -4,45 +4,33 @@ $('#childrenBtn').click(function childrenParse() {
         
         url: "libs/php/getChildren.php",
         type: 'POST',
-        dataType: 'json',
+        dataType: 'JSON',
         data: {
-            country: $('#selCountry').val(),
-            lang: $('#selLanguage').val()
+            country: $('#selChildCountry').val(),
         },
         success: function(result) {
             console.log(result);
             
             if (result.status.name == "ok") {
-
-                document.getElementById("countryTableDisplay").innerHTML =
-                `<div>
-                    <tr>
-                        <th>Continent</th>
-                        <th>Capital</th>
-                        <th>Languages</th>
-                        <th>Population</th>
-                        <th>Area (km<sup>2</sup>)</th>
-                    </tr>
-                    <tr>
-                        <td id="txtContinent"></td>
-                        <td id="txtCapital"></td>
-                        <td id="txtLanguages"></td>
-                        <td id="txtPopulation"></td>
-                        <td id="txtArea"></td>
-                    </tr>
-                </div>`;
-
-                $('#txtContinent').html(result['data'][0]['continent']);
-                $('#txtCapital').html(result['data'][0]['capital']);
-                $('#txtLanguages').html(result['data'][0]['languages']);
-                $('#txtPopulation').html(result['data'][0]['population']);
-                $('#txtArea').html(result['data'][0]['areaInSqKm']);
-                
+                console.log('adding table');
+                let table = `
+                <tr>
+                    <td id="childCount">childCount</td>
+                </tr>
+                `;
+                table += "<tr>";
+                result.data.array.forEach(i => {
+                    table += `<td>${data[i].adminName1}</td>`;
+                    console.log(`added ${data[i].adminName1} to table`);
+                });
+                table += "</tr>";
+                document.getElementById("childrenTableDisplay").innerHTML = table;
+                $('#childCount').html(result.data.length);
             }
         },
         error: function(jqXHR, textStatus, errorThrown){
-            console.log({jqXHR, textStatus, errorThrown})
-            document.getElementById("countryTableDisplay").innerHTML = `Error ${jqXHR.status}: ${errorThrown}`;
+            console.log({jqXHR, textStatus, errorThrown});
+            document.getElementById("childrenTableDisplay").innerHTML = `Error ${jqXHR.status}: ${textStatus} <br /> Discription: ${errorThrown}`;
         }
     });
 });
