@@ -10,7 +10,7 @@ $('#childrenBtn').click(function childrenParse() {
         },
         success: function(result) {
             console.log(result);
-            
+            console.log(result.status);
             if (result.status.name == "ok") {
                 console.log('adding table');
                 let table = `
@@ -19,10 +19,10 @@ $('#childrenBtn').click(function childrenParse() {
                 </tr>
                 `;
                 table += "<tr>";
-                result.data.array.forEach(i => {
-                    table += `<td>${data[i].adminName1}</td>`;
-                    console.log(`added ${data[i].adminName1} to table`);
-                });
+                for(i =0; i < result.data.length; i++) {
+                    table += `<td>${result.data[i].adminName1}</td>`;
+                    console.log(`added ${result.data[i].adminName1} to table`);
+                }
                 table += "</tr>";
                 document.getElementById("childrenTableDisplay").innerHTML = table;
                 $('#childCount').html(result.data.length);
