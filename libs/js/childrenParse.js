@@ -15,17 +15,14 @@ $('#childrenBtn').click(function childrenParse() {
                 console.log('adding table');
                 let table = `
                 <tr>
-                    <td id="childCount">childCount</td>
+                    <td id="childCount"></td>
                 </tr>
                 `;
-                table += "<tr>";
                 for(i =0; i < result.data.length; i++) {
-                    table += `<td>${result.data[i].adminName1}</td>`;
-                    console.log(`added ${result.data[i].adminName1} to table`);
-                }
-                table += "</tr>";
+                    table += `<tr><td>${result.data[i].name}</td></tr>`;
+                };
                 document.getElementById("childrenTableDisplay").innerHTML = table;
-                $('#childCount').html(result.data.length);
+                $('#childCount').html(`Number of districts: ${result.data.length} <br /><br />`);
             }
         },
         error: function(jqXHR, textStatus, errorThrown){
