@@ -14,7 +14,7 @@
         </header>
         <article class="main">
             <!-- country -->
-            <p>Find basic information</p>
+            <h1>Find Basic Information</h1>
             <select id="selCountry">
                 <option value="GB">Great Britain</option>
                 <option value="FR">France</option>
@@ -29,11 +29,11 @@
             </select>
             
             <button id="countryBtn">Search</button>
-
-            <table id="countryTableDisplay"></table>
-            
+            <details id="countryDetails" open style="display:none;">
+                <table id="countryTableDisplay"></table>
+            </details>
             <!-- children -->
-            <p>Find districts</p>
+            <h1>Find Districts and Population</h1>
             <select id="selChildCountry">
                 <option value="2635167">United Kingdom</option>
                 <option value="6252001">USA</option>
@@ -43,8 +43,10 @@
                 <option value="2287781">Côte</option>
             </select>
             <button id="childrenBtn">Search</button>
-
-            <table id="childrenTableDisplay"></table>
+            
+            <details id="childrenDetails" open style="display: none;">
+                <table id="childrenTableDisplay"></table>
+            </details>
         </article>
         <div id="preloader"></div>
 

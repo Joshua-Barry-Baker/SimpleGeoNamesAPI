@@ -27,6 +27,7 @@ $('#childrenBtn').click(function childrenParse() {
                 };
                 document.getElementById("childrenTableDisplay").innerHTML = table;
                 $('#childCount').html(`Number of districts: ${result.data.length}`);
+                document.getElementById('childrenDetails').style.display = "block";
             }
         },
         error: function(jqXHR, textStatus, errorThrown){
