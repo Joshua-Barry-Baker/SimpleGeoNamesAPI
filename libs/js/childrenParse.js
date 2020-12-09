@@ -17,12 +17,16 @@ $('#childrenBtn').click(function childrenParse() {
                 <tr>
                     <td id="childCount"></td>
                 </tr>
+                <tr>
+                    <th>District</th>
+                    <th>Population</th>
+                </tr>
                 `;
                 for(i =0; i < result.data.length; i++) {
-                    table += `<tr><td>${result.data[i].name}</td></tr>`;
+                    table += `<tr><td>${result.data[i].name}</td><td>${result.data[i].population}</td></tr>`;
                 };
                 document.getElementById("childrenTableDisplay").innerHTML = table;
-                $('#childCount').html(`Number of districts: ${result.data.length} <br /><br />`);
+                $('#childCount').html(`Number of districts: ${result.data.length}`);
             }
         },
         error: function(jqXHR, textStatus, errorThrown){
