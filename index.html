@@ -14,7 +14,7 @@
         </header>
         <article class="main">
             <!-- country -->
-            <p>Find basic information</p>
+            <h1>Find Basic Information</h1>
             <select id="selCountry">
                 <option value="GB">Great Britain</option>
                 <option value="FR">France</option>
@@ -29,11 +29,11 @@
             </select>
             
             <button id="countryBtn">Search</button>
-
-            <table id="countryTableDisplay"></table>
-            
+            <details id="countryDetails" open style="display:none;">
+                <table id="countryTableDisplay"></table>
+            </details>
             <!-- children -->
-            <p>Find districts</p>
+            <h1>Find Districts and Population</h1>
             <select id="selChildCountry">
                 <option value="2635167">United Kingdom</option>
                 <option value="6252001">USA</option>
@@ -43,8 +43,29 @@
                 <option value="2287781">Côte</option>
             </select>
             <button id="childrenBtn">Search</button>
+            
+            <details id="childrenDetails" open style="display: none;">
+                <table id="childrenTableDisplay"></table>
+            </details>
+            <!-- Geonames Wiki -->
+            <h1>Location Summery</h1>
+            <select id="selWiki">
+                <option value="London">London</option>
+                <option value="Paris">Paris</option>
+                <option value="Berlin">Berlin</option>
+                <option value="Washington">Washington</option>
+            </select>
+            <p>max number of locations returned</p>
+            <select id="selWikiMax">
+                <option value="3">3</option>
+                <option value="5">5</option>
+                <option value="10">10</option>
+            </select>
+            <button id="wikiBtn">Search</button>
 
-            <table id="childrenTableDisplay"></table>
+            <details id="wikiDetails" open style="display: none;">
+                <table id="wikiTableDisplay"></table>
+            </details>
         </article>
         <div id="preloader"></div>
 
@@ -52,5 +73,6 @@
 
         <script type="application/javascript" src="libs/js/countryParse.js"></script>
         <script type="application/javascript" src="libs/js/childrenParse.js"></script>
+        <script type="application/javascript" src="libs/js/wikiParse.js"></script>
     </body>
 </html>

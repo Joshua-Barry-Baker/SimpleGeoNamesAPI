@@ -37,7 +37,7 @@ $('#countryBtn').click(function countryParse() {
                 $('#txtLanguages').html(result['data'][0]['languages']);
                 $('#txtPopulation').html(result['data'][0]['population']);
                 $('#txtArea').html(result['data'][0]['areaInSqKm']);
-                
+                document.getElementById('countryDetails').style.display = "block";
             }
         },
         error: function(jqXHR, textStatus, errorThrown){
