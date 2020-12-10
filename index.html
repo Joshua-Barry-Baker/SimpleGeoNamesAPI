@@ -47,6 +47,25 @@
             <details id="childrenDetails" open style="display: none;">
                 <table id="childrenTableDisplay"></table>
             </details>
+            <!-- Geonames Wiki -->
+            <h1>Location Summery</h1>
+            <select id="selWiki">
+                <option value="London">London</option>
+                <option value="Paris">Paris</option>
+                <option value="Berlin">Berlin</option>
+                <option value="Washington">Washington</option>
+            </select>
+            <p>max number of locations returned</p>
+            <select id="selWikiMax">
+                <option value="3">3</option>
+                <option value="5">5</option>
+                <option value="10">10</option>
+            </select>
+            <button id="wikiBtn">Search</button>
+
+            <details id="wikiDetails" open style="display: none;">
+                <table id="wikiTableDisplay"></table>
+            </details>
         </article>
         <div id="preloader"></div>
 
@@ -54,5 +73,6 @@
 
         <script type="application/javascript" src="libs/js/countryParse.js"></script>
         <script type="application/javascript" src="libs/js/childrenParse.js"></script>
+        <script type="application/javascript" src="libs/js/wikiParse.js"></script>
     </body>
 </html>
