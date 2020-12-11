@@ -66,6 +66,19 @@
             <details id="wikiDetails" open style="display: none;">
                 <table id="wikiTableDisplay"></table>
             </details>
+            <!-- Neighbours -->
+            <h1>Location Neighbours</h1>
+            <select id="selNeighbours">
+                <option value="GB">Great Britain</option>
+                <option value="FR">France</option>
+                <option value="DE">Germany</option>
+                <option value="US">USA</option>
+            </select>
+            <button id="neighboursBtn">Search</button>
+
+            <details id="neighboursDetails" open style="display: none;">
+                <table id="neighboursTableDisplay"></table>
+            </details>
         </article>
         <div id="preloader"></div>
 
@@ -73,6 +86,7 @@
 
         <script type="application/javascript" src="libs/js/countryParse.js"></script>
         <script type="application/javascript" src="libs/js/childrenParse.js"></script>
+        <script type="application/javascript" src="libs/js/neighbours.js"></script>
         <script type="application/javascript" src="libs/js/wikiParse.js"></script>
     </body>
 </html>
