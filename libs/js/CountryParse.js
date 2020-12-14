@@ -43,6 +43,7 @@ $('#countryBtn').click(function countryParse() {
         error: function(jqXHR, textStatus, errorThrown){
             console.log({jqXHR, textStatus, errorThrown})
             document.getElementById("countryTableDisplay").innerHTML = `Error ${jqXHR.status}: ${errorThrown}`;
+            document.getElementById('countryDetails').style.display = "block";
         }
     });
 });

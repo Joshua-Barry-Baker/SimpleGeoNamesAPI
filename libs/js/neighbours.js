@@ -33,6 +33,7 @@ $('#neighboursBtn').click(function neighboursParse() {
         error: function(jqXHR, textStatus, errorThrown){
             console.log({jqXHR, textStatus, errorThrown});
             document.getElementById("neighboursTableDisplay").innerHTML = `Error ${jqXHR.status}: ${textStatus} <br /> Discription: ${errorThrown}`;
+            document.getElementById('neighboursDetails').style.display = "block";
         }
     });
 });

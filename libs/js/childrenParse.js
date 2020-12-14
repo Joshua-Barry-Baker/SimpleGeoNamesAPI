@@ -33,6 +33,7 @@ $('#childrenBtn').click(function childrenParse() {
         error: function(jqXHR, textStatus, errorThrown){
             console.log({jqXHR, textStatus, errorThrown});
             document.getElementById("childrenTableDisplay").innerHTML = `Error ${jqXHR.status}: ${textStatus} <br /> Discription: ${errorThrown}`;
+            document.getElementById('childrenDetails').style.display = "block";
         }
     });
 });

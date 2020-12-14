@@ -40,6 +40,7 @@ $('#wikiBtn').click(function wikiParse() {
         error: function(jqXHR, textStatus, errorThrown){
             console.log({jqXHR, textStatus, errorThrown});
             document.getElementById("wikiTableDisplay").innerHTML = `Error ${jqXHR.status}: ${textStatus} <br /> Discription: ${errorThrown}`;
+            document.getElementById('wikiDetails').style.display = "block";
         }
     });
 });
